@@ -1,26 +1,26 @@
-// Respostas fixas:
+// systems/keywordResponder.js
+
+// Respostas fixas (sempre respondem)
 const FIXED_RESPONSES = {
-  "teste": "testado 😎",
-  "EU, TU": "NOIS BOTA NELAS",
-  ";-;": "chora não 🥺",
-  ":>": ":D",
+  "testei": "testado 😎",
+  "eu, tu": "NOIS BOTA NELAS",
+  "nossa": "veyyrr"
 };
 
-// Respostas aleatórias:
+// Respostas aleatórias (resposta com chance)
 const RANDOM_RESPONSES = {
-  ";-;": ["chora não 🥺", "tá tudo bem 😢", "tranquilo, respira 😌", "dorme que passa"],
-  ":>": "😎",
-  "Nossa": "veyyrr",
+  ";-;": ["chora não 🥺", "tá tudo bem 😢", "tranquilo, respira 😌"],
+  ":>": [":D", "😎"]
 };
 
-const RANDOM_CHANCE = 0.5; // 0.1 = 10%
+const RANDOM_CHANCE = 0.7; // 70% de chance de responder
 
 module.exports = async (message) => {
-  if (message.author.bot) return; // ignora bots
+  if (message.author.bot) return;
 
   const content = message.content.toLowerCase();
 
-  // 1️⃣ Respostas fixas
+  // Respostas fixas
   for (const keyword in FIXED_RESPONSES) {
     if (content.includes(keyword)) {
       try {
@@ -32,10 +32,10 @@ module.exports = async (message) => {
     }
   }
 
-  // 2️⃣ Respostas aleatórias
+  // Respostas aleatórias
   for (const keyword in RANDOM_RESPONSES) {
     if (content.includes(keyword)) {
-      if (Math.random() > RANDOM_CHANCE) return; // não dispara
+      if (Math.random() > RANDOM_CHANCE) return;
 
       const possibleReplies = RANDOM_RESPONSES[keyword];
       const reply = possibleReplies[Math.floor(Math.random() * possibleReplies.length)];
