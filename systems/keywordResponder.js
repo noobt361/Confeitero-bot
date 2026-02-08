@@ -6,7 +6,7 @@ const FIXED_RESPONSES = {
   "ola": "Oi oi 👋",
   "complicado": "there is fuck",
   "confeitero": async (message) => {
-    await message.channel.send(`<@${message.author.id}>, não sei oque e porque ainda não sei ler... mais acho que pode não`);
+    await message.channel.send(`<@${message.author.id}>, não sei oque e porque ainda não sei ler... mais acho que pode não`)
 };
 
 // Respostas aleatórias: só respondem com uma chance
