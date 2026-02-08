@@ -6,22 +6,21 @@ const keywordResponder = require("../systems/keywordResponder");
 module.exports = {
   name: "messageCreate",
   async execute(client, message) {
-    if (message.author.bot) return; // ignora bots
+    if (message.author.bot) return;
 
-    // ===============================
-    // SISTEMAS PASSIVOS
-    // ===============================
-    // Para todos os sistemas, passamos a message e o client se necessário
-    randomReaction(message); // reações aleatórias
-    randomReply(message, client); // respostas aleatórias
-    mentionWatcher(message, client); // respostas a menções
-    keywordResponder(message); // respostas fixas ou aleatórias por palavra-chave
+    // ---------- SISTEMAS PASSIVOS ----------
+    try { randomReaction(message); } catch(err){ console.error(err); }
+    try { randomReply(message, client); } catch(err){ console.error(err); }
+    try { mentionWatcher(message, client); } catch(err){ console.error(err); }
+    try { keywordResponder(message); } catch(err){ console.error(err); }
+
+    // ---------- COMANDOS PREFIXADOS ----------
+    if (!message.content.startsWith(client.PREFIX)) return;
 
     const args = message.content
       .slice(client.PREFIX.length)
       .trim()
       .split(/ +/);
-
     const commandName = args.shift().toLowerCase();
     const command = client.commands.get(commandName);
     if (!command) return;
@@ -30,7 +29,7 @@ module.exports = {
       await command.execute(message, args);
     } catch (err) {
       console.error(`Erro ao executar comando ${commandName}:`, err);
-      message.reply(" Ocorreu um erro ao executar este comando.");
+      message.reply("❌ Ocorreu um erro ao executar este comando.");
     }
   }
 };
