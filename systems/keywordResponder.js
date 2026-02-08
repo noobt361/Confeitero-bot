@@ -4,7 +4,7 @@
 const FIXED_RESPONSES = {
   "testei": "testado 😎",
   "ola": "Oi oi 👋",
-  "Complicado": "there is fuck",
+  "complicado": "there is fuck",
   "propoia": "olha so..."
 };
 
@@ -12,9 +12,8 @@ const FIXED_RESPONSES = {
 const RANDOM_RESPONSES = {
   ";-;": ["chora não 🥺", "tá tudo bem 😢", "tranquilo, respira 😌", "dorme que passa 😴"],
   ":>": [":D", "😎"],
-  "Nossa": ["veyyrr"],
+  "nossa": ["veyyrr"],
   "aff": ["meo"],
-  "T-T": [".,."]
 };
 
 const RANDOM_CHANCE = 1; // 0.1 = 10%
