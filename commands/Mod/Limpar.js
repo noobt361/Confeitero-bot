@@ -1,5 +1,5 @@
 module.exports = {
-  name: "limpar", "limp",
+  name: ["limpar", "limp",]
   execute(message, args) {
     if (!message.member.permissions.has("ManageMessages")) {
       return message.reply("❌ Sem permissão.");
