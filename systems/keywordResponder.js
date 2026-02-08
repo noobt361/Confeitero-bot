@@ -5,7 +5,6 @@ const FIXED_RESPONSES = {
   "testei": "testado 😎",
   "ola": "Oi oi 👋",
   "EU, TU": "NOIS BOTA NELAS",
-  "O BONDE CHEGO": "É OS PREDADOR DE PERERECAA "
 
 };
 
