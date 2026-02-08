@@ -10,10 +10,11 @@ const FIXED_RESPONSES = {
 
 // Respostas aleatórias: só respondem com uma chance
 const RANDOM_RESPONSES = {
-  ";-;": ["chora não 🥺", "tá tudo bem 😢", "tranquilo, respira 😌", "dorme que passa"],
+  ";-;": ["chora não 🥺", "tá tudo bem 😢", "tranquilo, respira 😌", "dorme que passa 😴"],
   ":>": [":D", "😎"],
   "Nossa": "veyyrr",
-  "aff": "meo"
+  "aff": "meo",
+  "T-T": ".,."
 };
 
 const RANDOM_CHANCE = 0.09; // 0.1 = 10%
