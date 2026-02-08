@@ -5,9 +5,8 @@ const FIXED_RESPONSES = {
   "testei": "testado 😎",
   "ola": "Oi oi 👋",
   "complicado": "there is fuck",
-  "confeitero": async (message) => {
-    await message.channel.send(`<@${message.author.id}>, não sei oque e porque ainda não sei ler... mais acho que pode não`)
-}
+  "confeitero": "não sei oque e porque ainda não sei ler... mais acho que pode não",
+};
 
 // Respostas aleatórias: só respondem com uma chance
 const RANDOM_RESPONSES = {
@@ -26,22 +25,15 @@ module.exports = async (message) => {
 
   // 1️⃣ Respostas fixas
   for (const keyword in FIXED_RESPONSES) {
-  if (content.includes(keyword)) {
-    try {
-      const response = FIXED_RESPONSES[keyword];
-      
-      if (typeof response === "function") {
-        await response(message); // chama a função passando o message
-      } else {
-        await message.reply(response); // envia string normalmente
+    if (content.includes(keyword)) {
+      try {
+        await message.reply(FIXED_RESPONSES[keyword]);
+      } catch (err) {
+        console.error("Erro ao responder palavra-chave fixa:", err);
       }
-    } catch (err) {
-      console.error("Erro ao responder palavra-chave fixa:", err);
+      return; // sai após responder fixo
     }
-    return; // só responde uma vez
   }
-}
-
 
   // 2️⃣ Respostas aleatórias
   for (const keyword in RANDOM_RESPONSES) {
