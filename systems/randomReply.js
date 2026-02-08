@@ -13,6 +13,7 @@ const PHRASES = [
   "propoia...",
   "elx ta certx, confia",
   "nem te conto"
+];
 
 module.exports = async (message, client) => {
   if (message.content.startsWith(client.PREFIX)) return;
