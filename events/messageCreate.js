@@ -6,17 +6,21 @@ const keywordResponder = require("../systems/keywordResponder");
 module.exports = {
   name: "messageCreate",
   async execute(client, message) {
-    if (message.author.bot) return;
+    if (message.author.bot) return; // ignora bots
 
-    client.on("messageCreate", async (message) => {
+    // ===============================
+    // SISTEMAS PASSIVOS
+    // ===============================
+    // Para todos os sistemas, passamos a message e o client se necessário
+    randomReaction(message); // reações aleatórias
+    randomReply(message, client); // respostas aleatórias
+    mentionWatcher(message, client); // respostas a menções
+    keywordResponder(message); // respostas fixas ou aleatórias por palavra-chave
 
-    // sistemas passivos
-    randomReaction(message, client);
-    randomReply(message, client);
-    mentionWatcher(message, client);
-    keywordResponder(message);
-
-    // comandos
+    // ===============================
+    // COMANDOS EXPLICÍTEOS (prefixados)
+    // ===============================
+    if (!client.PREFIX) client.PREFIX = "="; // define prefixo padrão caso não exista
     if (!message.content.startsWith(client.PREFIX)) return;
 
     const args = message.content
@@ -28,6 +32,11 @@ module.exports = {
     const command = client.commands.get(commandName);
     if (!command) return;
 
-    command.execute(message, args);
+    try {
+      await command.execute(message, args);
+    } catch (err) {
+      console.error(`Erro ao executar comando ${commandName}:`, err);
+      message.reply("❌ Ocorreu um erro ao executar este comando.");
+    }
   }
 };
