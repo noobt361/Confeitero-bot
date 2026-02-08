@@ -26,15 +26,22 @@ module.exports = async (message) => {
 
   // 1️⃣ Respostas fixas
   for (const keyword in FIXED_RESPONSES) {
-    if (content.includes(keyword)) {
-      try {
-        await message.reply(FIXED_RESPONSES[keyword]);
-      } catch (err) {
-        console.error("Erro ao responder palavra-chave fixa:", err);
+  if (content.includes(keyword)) {
+    try {
+      const response = FIXED_RESPONSES[keyword];
+      
+      if (typeof response === "function") {
+        await response(message); // chama a função passando o message
+      } else {
+        await message.reply(response); // envia string normalmente
       }
-      return; // sai após responder fixo
+    } catch (err) {
+      console.error("Erro ao responder palavra-chave fixa:", err);
     }
+    return; // só responde uma vez
   }
+}
+
 
   // 2️⃣ Respostas aleatórias
   for (const keyword in RANDOM_RESPONSES) {
