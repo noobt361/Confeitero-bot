@@ -13,11 +13,11 @@ const FIXED_RESPONSES = {
 const RANDOM_RESPONSES = {
   ";-;": ["chora não 🥺", "tá tudo bem 😢", "tranquilo, respira 😌", "dorme que passa"],
   ":>": [":D", "😎"],
-  "Nossa": "veyyrr"
+  "Nossa": "veyyrr",
   "aff": "meo"
 };
 
-const RANDOM_CHANCE = 0.1; // 0.1 = 10%
+const RANDOM_CHANCE = 0.09; // 0.1 = 10%
 
 module.exports = async (message) => {
   if (message.author.bot) return; // ignora bots
