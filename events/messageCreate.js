@@ -17,12 +17,6 @@ module.exports = {
     mentionWatcher(message, client); // respostas a menções
     keywordResponder(message); // respostas fixas ou aleatórias por palavra-chave
 
-    // ===============================
-    // COMANDOS EXPLICÍTEOS (prefixados)
-    // ===============================
-    if (!client.PREFIX) client.PREFIX = "="; // define prefixo padrão caso não exista
-    if (!message.content.startsWith(client.PREFIX)) return;
-
     const args = message.content
       .slice(client.PREFIX.length)
       .trim()
