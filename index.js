@@ -31,7 +31,7 @@ for (const folder of commandFolders) {
 
 client.on("messageCreate", (message) => {
   if (message.author.bot) return;
-  if (!message.content.startsWith("!")) return;
+  if (!message.content.startsWith("=")) return;
 
   const args = message.content.slice(1).trim().split(/ +/);
   const commandName = args.shift().toLowerCase();
