@@ -41,7 +41,7 @@ for (const file of fs.readdirSync(eventsPath)) {
    ONLINE
 ================================ */
 client.once("ready", () => {
-  console.log("🤖 Bot online e organizado!");
+  console.log("🤖 Bot online");
 });
 
 client.login(process.env.DISCORD_TOKEN);
