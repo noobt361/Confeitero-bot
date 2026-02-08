@@ -1,5 +1,5 @@
 module.exports = {
-  name: "kickass, kick",
+  name: "kickass",
   description: "Expulsa um usuário específico do servidor, respeitando permissões e cargos",
   async execute(message, args) {
     // IDs de usuários autorizados
