@@ -6,7 +6,6 @@ const FIXED_RESPONSES = {
   "ola": "Oi oi 👋",
   "Complicado": "there is fuck",
   "propoia": "olha so..."
-
 };
 
 // Respostas aleatórias: só respondem com uma chance
@@ -18,7 +17,7 @@ const RANDOM_RESPONSES = {
   "T-T": [".,."]
 };
 
-const RANDOM_CHANCE = 0.09; // 0.1 = 10%
+const RANDOM_CHANCE = 1; // 0.1 = 10%
 
 module.exports = async (message) => {
   if (message.author.bot) return; // ignora bots
