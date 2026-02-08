@@ -1,16 +1,16 @@
 // Respostas fixas:
 const FIXED_RESPONSES = {
   "teste": "testado 😎",
-  "EU, TU": "NOIS BOTA NELAS"
-  ";-;": "chora não 🥺"
-  ":>": ":D"
+  "EU, TU": "NOIS BOTA NELAS",
+  ";-;": "chora não 🥺",
+  ":>": ":D",
 };
 
 // Respostas aleatórias:
 const RANDOM_RESPONSES = {
   ";-;": ["chora não 🥺", "tá tudo bem 😢", "tranquilo, respira 😌", "dorme que passa"],
-  ":>": "😎"
-  "Nossa": "veyyrr"
+  ":>": "😎",
+  "Nossa": "veyyrr",
 };
 
 const RANDOM_CHANCE = 0.5; // 0.1 = 10%
