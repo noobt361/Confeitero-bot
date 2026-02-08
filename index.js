@@ -2,6 +2,13 @@ const { Client, GatewayIntentBits, Collection } = require("discord.js");
 const fs = require("fs");
 const path = require("path");
 
+//porcentagens
+const RANDOM_REPLY_CHANCE = 0.05; // 5%
+const RANDOM_REACTION_CHANCE = 0.1;
+
+
+
+
 const client = new Client({
   intents: [
     GatewayIntentBits.Guilds,
@@ -15,10 +22,20 @@ const client = new Client({
 ================================ */
 const PREFIX = "=";
 
-// chance de reação (0.1 = 10%)
-const RANDOM_REACTION_CHANCE = 0.1;
+//Aleatorios
 
+//Emojis
 const RANDOM_EMOJIS = ["😂", "🍰", "❤️", "👀", "😈"];
+
+//Frases 
+const RANDOM_PHRASES = [
+  "👀 interessante isso aí...",
+  "hm… faz sentido 🤔",
+  "não sei se concordo, mas ok 😈",
+  "isso me parece suspeito",
+  "anotado 📌",
+  "🍰 alguém falou em bolo?"
+];
 
 /* ===============================
    SISTEMA DE COMANDOS
@@ -47,6 +64,24 @@ for (const folder of commandFolders) {
 ================================ */
 client.on("messageCreate", async (message) => {
   if (message.author.bot) return;
+
+  /* ---- RESPOSTA ALEATÓRIA ---- */
+if (!message.content.startsWith(PREFIX)) {
+  if (Math.random() < RANDOM_REPLY_CHANCE) {
+    const phrase =
+      RANDOM_PHRASES[Math.floor(Math.random() * RANDOM_PHRASES.length)];
+
+    try {
+      await message.reply({
+        content: phrase,
+        allowedMentions: { repliedUser: false }
+      });
+    } catch (err) {
+      console.error("Erro ao responder:", err);
+    }
+  }
+}
+
 
   /* ---- INTERAÇÃO ALEATÓRIA ---- */
   if (!message.content.startsWith(PREFIX)) {
