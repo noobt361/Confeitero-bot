@@ -30,7 +30,7 @@ module.exports = {
       await command.execute(message, args);
     } catch (err) {
       console.error(`Erro ao executar comando ${commandName}:`, err);
-      message.reply("❌ Ocorreu um erro ao executar este comando.");
+      message.reply(" Ocorreu um erro ao executar este comando.");
     }
   }
 };
