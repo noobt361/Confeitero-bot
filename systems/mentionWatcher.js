@@ -1,10 +1,17 @@
-const TIME = 8000;
+const TIME = 12000; //1000 ms = 1 seg
 
 const PHRASES = [
-  "👀 acho que a notificação não chegou...",
-  "👋 chamaram você aí",
-  "⏳ estamos aguardando uma resposta",
-  "📢 alô?"
+  "acho que a notificação não chegou...",
+  "chamaram você aí",
+  "estamos aguardando uma resposta",
+  "alô?"
+  "Ta vivo?"
+  "Alooooooo, alguem?!?!?!"
+  "tá ocupadx eu acho..."
+  "ta ai doidx?"
+  "ACORDA BAIANO"
+  "Assim complica patrão, elx num chega"
+  "Ou ce aparece... ou aparece"
 ];
 
 module.exports = (message, client) => {

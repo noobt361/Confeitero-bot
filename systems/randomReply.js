@@ -1,12 +1,18 @@
-const CHANCE = 0.05;
+const CHANCE = 0.05; //0.01 = 1%
 
 const PHRASES = [
   "👀 interessante isso aí...",
-  "hm… faz sentido 🤔",
-  "isso me parece suspeito",
+  "hm… faz sentido? 🤔",
+  "isso me parece sus...",
   "anotado 📌",
-  "🍰 alguém falou em bolo?"
-];
+  "complicado isso ai viu?"
+  "uhum... sei"
+  "tenho minhas duvida"
+  "Gosto de azul :D"
+  "Verdade isso ai... mais sabia que a Pale Light Very Light Bright Olive Green e muito feia?"
+  "propoia..."
+  "elx ta certx, confia"
+  "nem te conto"
 
 module.exports = async (message, client) => {
   if (message.content.startsWith(client.PREFIX)) return;

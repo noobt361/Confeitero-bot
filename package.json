@@ -1,6 +1,6 @@
 {
   "name": "confeitero-bot",
-  "version": "1.0.0",
+  "version": "32.0",
   "main": "index.js",
   "type": "commonjs",
   "scripts": {

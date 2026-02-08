@@ -4,7 +4,7 @@
 const FIXED_RESPONSES = {
   "testei": "testado 😎",
   "ola": "Oi oi 👋",
-  "EU, TU": "NOIS BOTA NELAS",
+  "Complicado": "there is fuck"
 
 };
 
