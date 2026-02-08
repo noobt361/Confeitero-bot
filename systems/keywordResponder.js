@@ -5,7 +5,8 @@ const FIXED_RESPONSES = {
   "testei": "testado 😎",
   "ola": "Oi oi 👋",
   "complicado": "there is fuck",
-  "propoia": "olha so..."
+  "confeitero": async (message) => {
+    await message.channel.send(`<@${message.author.id}>, não sei oque e porque ainda não sei ler... mais acho que pode não`);
 };
 
 // Respostas aleatórias: só respondem com uma chance
@@ -16,7 +17,7 @@ const RANDOM_RESPONSES = {
   "aff": ["meo"],
 };
 
-const RANDOM_CHANCE = 1; // 0.1 = 10%
+const RANDOM_CHANCE = 0.2; // 0.1 = 10%
 
 module.exports = async (message) => {
   if (message.author.bot) return; // ignora bots
