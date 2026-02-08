@@ -5,13 +5,13 @@ const PHRASES = [
   "hm… faz sentido? 🤔",
   "isso me parece sus...",
   "anotado 📌",
-  "complicado isso ai viu?"
-  "uhum... sei"
-  "tenho minhas duvida"
-  "Gosto de azul :D"
-  "Verdade isso ai... mais sabia que a Pale Light Very Light Bright Olive Green e muito feia?"
-  "propoia..."
-  "elx ta certx, confia"
+  "complicado isso ai viu?",
+  "uhum... sei",
+  "tenho minhas duvida",
+  "Gosto de azul :D",
+  "Verdade isso ai... mais sabia que a Pale Light Very Light Bright Olive Green e muito feia?",
+  "propoia...",
+  "elx ta certx, confia",
   "nem te conto"
 
 module.exports = async (message, client) => {
