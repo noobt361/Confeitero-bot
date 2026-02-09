@@ -5,8 +5,9 @@ const PHRASES = [
   "ih rapaz, mais um",
   "boa noite, criatura",
   "chegou atrasado em",
-  "bem-vindo amiguin"
-  "mais ummmmm"
+  "bem-vindo amiguin",
+  "mais ummmmm",
+  "aeeee, mais amiguin"
 ];
 
 module.exports = {
