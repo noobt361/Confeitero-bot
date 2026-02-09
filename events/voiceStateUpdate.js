@@ -31,7 +31,7 @@ module.exports = {
     const phrase = PHRASES[Math.floor(Math.random() * PHRASES.length)];
 
     // 🔍 escolhe canal de texto
-    let textChannel = 1445621984292507668;
+    let textChannel = 1445619872183619698;
 
     // 1️⃣ canal fixo
     if (TEXT_CHANNEL_ID) {

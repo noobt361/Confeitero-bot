@@ -1,7 +1,7 @@
 const { joinVoiceChannel } = require("@discordjs/voice");
 
 const MIN_TIME = 0; // 0 segundos
-const MAX_TIME = 5 * 60 * 1000; // 5 minutos
+const MAX_TIME = 2 * 60 * 1000; // 5 minutos
 
 function randomDelay() {
   return Math.floor(Math.random() * (MAX_TIME - MIN_TIME + 1)) + MIN_TIME;
