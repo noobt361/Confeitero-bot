@@ -188,6 +188,31 @@ function generateAdaptivePhrase() {
 }
 
 /* ===============================
+   GERADORES EXPLÍCITOS
+================================ */
+
+function generateChaos() {
+  return chaosPhrase();
+}
+
+function generateShort() {
+  return shortPhrase();
+}
+
+function generateLong() {
+  return longPhrase();
+}
+
+function generateLore() {
+  return lorePhrase();
+}
+
+function generatePhilosophy() {
+  return philosopherPhrase();
+}
+
+
+/* ===============================
    EXPORTS
 ================================ */
 
