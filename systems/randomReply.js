@@ -1,6 +1,6 @@
 const { generateAdaptivePhrase } = require("./phraseGenerator");
 
-const CHANCE = 1; // 100% de chance por mensagem
+const CHANCE = 0.09; // 100% de chance por mensagem
 
 module.exports = async (message, client) => {
   if (message.author.bot) return;

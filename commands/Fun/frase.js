@@ -6,7 +6,7 @@ const {
   generateLore,
   generatePhilosophy,
   generateInsult
-} = require("../../systems/phraseGenerator");
+}; = require("../../systems/phraseGenerator");
 
 module.exports = {
   name: "frase",
