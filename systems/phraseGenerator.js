@@ -115,6 +115,9 @@ function verbOnly() {
   return pick(VERBS);
 }
 
+function generateInsult() {
+  return `você é muito ${pick(ADJECTIVES)} pra um ${pick(OBJECTS)}`;
+}
 /* ===============================
    SELETOR DE FRASE (NÍVEL 3)
 ================================ */
@@ -192,4 +195,10 @@ module.exports = {
   generatePhrase,
   generateUniquePhrase,
   generateAdaptivePhrase
+  generateChaos,
+  generateShort,
+  generateLong,
+  generateLore,
+  generatePhilosophy,
+  generateInsult
 };
