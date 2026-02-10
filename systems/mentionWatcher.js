@@ -12,6 +12,7 @@ const PHRASES = [
   "ACORDA BAIANO",
   "Assim complica patrão, elx num chega",
   "Ou ce aparece... ou aparece",
+  "vai demorar muito?"
 ];
 
 module.exports = (message, client) => {
