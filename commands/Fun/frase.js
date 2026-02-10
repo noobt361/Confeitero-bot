@@ -1,13 +1,3 @@
-const {
-  generateAdaptivePhrase,
-  generateChaos,
-  generateShort,
-  generateLong,
-  generateLore,
-  generatePhilosophy,
-  generateInsult
-}; = require("../../systems/phraseGenerator");
-
 module.exports = {
   name: "frase",
   description: "Gera frases caóticas do confeiteiro 🍰",
@@ -15,7 +5,9 @@ module.exports = {
   async execute(message, args) {
     let phrase;
 
-    switch ((args[0] || "").toLowerCase()) {
+    const sub = (args[0] || "").toLowerCase();
+
+    switch (sub) {
       case "caos":
         phrase = generateChaos();
         break;
@@ -41,18 +33,16 @@ module.exports = {
           phrase = generateInsult();
           break;
         }
+        phrase = generateAdaptivePhrase();
+        break;
 
       default:
         phrase = generateAdaptivePhrase();
     }
 
-    try {
-      await message.reply({
-        content: phrase,
-        allowedMentions: { repliedUser: false }
-      });
-    } catch (err) {
-      console.error("Erro no comando frase:", err);
-    }
+    await message.reply({
+      content: phrase,
+      allowedMentions: { repliedUser: false }
+    });
   }
 };
