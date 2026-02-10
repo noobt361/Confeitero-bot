@@ -10,7 +10,7 @@ module.exports = {
 
     if (args[0] === "on") {
       randomCallJoiner.start(message.client);
-      return message.reply("Call?? agora?");
+      return message.reply("Call?? agora?", "opaa, ja vou");
     }
 
     if (args[0] === "off") {

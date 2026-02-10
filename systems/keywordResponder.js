@@ -7,7 +7,7 @@ const FIXED_RESPONSES = {
   "complicado": "there is fuck",
   "confeitero": "não sei oque e porque ainda não sei ler... mais acho que pode não",
   "feiticeira": "faz feitiço",
-  "gif": "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHJ3OHNsOHR3d2FxaTFvNTF6YjR0cmFtdmdwOGxkZ2R3NW5zdGZ1eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LKFzjcZmI42iMpdjVS/giphy.gif"
+  "-gif": "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHJ3OHNsOHR3d2FxaTFvNTF6YjR0cmFtdmdwOGxkZ2R3NW5zdGZ1eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LKFzjcZmI42iMpdjVS/giphy.gif"
 };
 
 // Respostas aleatórias: só respondem com uma chance

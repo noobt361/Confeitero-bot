@@ -1,4 +1,4 @@
-const CHANCE = 0.7; //0.01 = 1%
+const CHANCE = 0.07; //0.01 = 1%
 
 const PHRASES = [
   "👀 interessante isso aí...",
@@ -18,7 +18,9 @@ const PHRASES = [
   "muito importante estudar",
   "tirin tin tin, a oferta vai caindo dentro da calcinha",
   "ainnn",
-  "porca, relaxada, xexecuda"
+  "porca, relaxada, xexecuda",
+  "estamos passando por uma cen-",
+  "сукины сыны"
 ];
 
 module.exports = async (message, client) => {
