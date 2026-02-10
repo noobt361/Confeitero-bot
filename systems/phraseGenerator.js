@@ -194,7 +194,7 @@ function generateAdaptivePhrase() {
 module.exports = {
   generatePhrase,
   generateUniquePhrase,
-  generateAdaptivePhrase
+  generateAdaptivePhrase,
   generateChaos,
   generateShort,
   generateLong,
