@@ -1,3 +1,14 @@
+const {
+  generateAdaptivePhrase,
+  generateChaos,
+  generateShort,
+  generateLong,
+  generateLore,
+  generatePhilosophy,
+  generateInsult
+} = require("../../systems/phraseGenerator");
+
+
 module.exports = {
   name: "frase",
   description: "Gera frases caóticas do confeiteiro 🍰",
@@ -27,14 +38,13 @@ module.exports = {
       case "filosofia":
         phrase = generatePhilosophy();
         break;
-
       case "me":
-        if (args[1]?.toLowerCase() === "xinga") {
-          phrase = generateInsult();
-          break;
-        }
-        phrase = generateAdaptivePhrase();
-        break;
+      if (args[1] && args[1].toLowerCase() === "xinga") {
+      phrase = generateInsult();
+      } else {
+      phrase = generateAdaptivePhrase();
+      }
+      break;
 
       default:
         phrase = generateAdaptivePhrase();
